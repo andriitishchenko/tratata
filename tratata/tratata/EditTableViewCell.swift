@@ -10,6 +10,7 @@ import UIKit
 
 class EditTableViewCell: UITableViewCell {
 
+    @IBOutlet var textInput: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,12 +10,14 @@ import UIKit
 
 protocol BaseControllerInterface: NSObjectProtocol {
     var datasource: NSMutableArray{ get set }
+    var datasourceMap: NSMutableDictionary{ get set }
     func test()
 }
 
 
 class BaseTableViewController: UITableViewController, BaseControllerInterface{
     var datasource: NSMutableArray = []
+    var datasourceMap: NSMutableDictionary = NSMutableDictionary()
     
     func test(){
         println("test")
@@ -24,6 +26,7 @@ class BaseTableViewController: UITableViewController, BaseControllerInterface{
 
 class BaseViewController: UIViewController, BaseControllerInterface{
     var datasource: NSMutableArray = []
+    var datasourceMap: NSMutableDictionary = NSMutableDictionary()
     @IBOutlet var tableView: UITableView!
     
     func test(){
